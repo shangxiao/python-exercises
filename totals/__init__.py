@@ -5,12 +5,12 @@ def calculate_total_cost():
         2. Builtin sum():  https://docs.python.org/3/library/functions.html#sum
         3. List comprehension:  https://docs.python.org/3/howto/functional.html#generator-expressions-and-list-comprehensions
     """
-    totals = [
-        calculate_category_total(category)
-        for category in ["rent", "utilities", "ingredients"]
-    ]
-
-    return sum(totals)
+    return sum(
+        [
+            calculate_category_total(category)
+            for category in ["rent", "utilities", "ingredients"]
+        ]
+    )
 
 
 def calculate_category_total(category):
