@@ -1,10 +1,13 @@
 def calculate_total_cost():
-    total = 0
-    categories = ["rent", "utilities", "ingredients"]
-    for category in categories:
-        total += calculate_category_total(category)
+    """
+    Lessons:
+        1. Builtin sum():  https://docs.python.org/3/library/functions.html#sum
+    """
+    totals = []
+    for category in ["rent", "utilities", "ingredients"]:
+        totals.append(calculate_category_total(category))
 
-    return total
+    return sum(totals)
 
 
 def calculate_category_total(category):
