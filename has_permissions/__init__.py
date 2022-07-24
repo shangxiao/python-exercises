@@ -8,8 +8,8 @@ class Permission:
 
 
 def has_permission(permission_list):
-    for permission in permission_list:
-        if not permission.has_permission:
-            return False
-
-    return True
+    """
+    Lessons:
+      - all:  https://docs.python.org/3/library/functions.html#all
+    """
+    return all(permission.has_permission for permission in permission_list)
