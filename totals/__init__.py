@@ -2,13 +2,13 @@ def calculate_total_cost():
     """
     Lessons:
         1. Augmented assignment:  https://docs.python.org/3/reference/simple_stmts.html#augmented-assignment-statements
+        2. Builtin sum():  https://docs.python.org/3/library/functions.html#sum
     """
-    total = 0
-    categories = ["rent", "utilities", "ingredients"]
-    for category in categories:
-        total += calculate_category_total(category)
+    totals = []
+    for category in ["rent", "utilities", "ingredients"]:
+        totals.append(calculate_category_total(category))
 
-    return total
+    return sum(totals)
 
 
 def calculate_category_total(category):
