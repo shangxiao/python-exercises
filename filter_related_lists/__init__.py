@@ -8,12 +8,17 @@ WEEKDAYS = [
 
 
 def filter_only_weekdays(labels, data):
+    """
+    Lessons:
+      1. enumerate() builtin:   https://docs.python.org/3/library/functions.html#enumerate
+
+    """
     new_labels = []
     new_data = []
 
-    for i in range(len(labels)):
-        if labels[i] in WEEKDAYS:
-            new_labels.append(labels[i])
+    for (i, label) in enumerate(labels):
+        if label in WEEKDAYS:
+            new_labels.append(label)
             new_data.append(data[i])
 
     return (new_labels, new_data)
