@@ -2,10 +2,12 @@ def calculate_total_cost():
     """
     Lessons:
         1. Builtin sum():  https://docs.python.org/3/library/functions.html#sum
+        2. List comprehension:  https://docs.python.org/3/howto/functional.html#generator-expressions-and-list-comprehensions
     """
-    totals = []
-    for category in ["rent", "utilities", "ingredients"]:
-        totals.append(calculate_category_total(category))
+    totals = [
+        calculate_category_total(category)
+        for category in ["rent", "utilities", "ingredients"]
+    ]
 
     return sum(totals)
 
